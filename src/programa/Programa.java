@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dados.Times;
+import utilidades.Predicado;
 
 public class Programa {
 
@@ -15,7 +16,7 @@ public class Programa {
 		lista.add(new Times("Botafogo", 59, 43, 39));
 		lista.add(new Times("Fluminense", 50, 45, 45));	
 		
-		lista.removeIf(t -> t.getPontos() == 50);
+		lista.removeIf(new Predicado());
 		
 		for (Times t : lista) {
 			System.out.println(lista);
