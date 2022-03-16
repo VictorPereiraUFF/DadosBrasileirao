@@ -16,9 +16,7 @@ public class Programa {
 		lista.add(new Times("Botafogo", 59, 43, 39));
 		lista.add(new Times("Fluminense", 50, 45, 45));	
 		
-		Predicate<Times> pred = p -> p.getDefesa() <= 40;
-		
-		lista.removeIf(pred);
+		lista.removeIf(p -> p.getDefesa() <= 40);
 		
 		for (Times t : lista) {
 			System.out.println(lista);
