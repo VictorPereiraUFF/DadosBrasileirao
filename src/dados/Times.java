@@ -46,6 +46,12 @@ public class Times {
 		this.defesa = defesa;
 	}
 	
+	public static boolean staticTimes(Times t) {
+		return t.getAtaque() <= 50;
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return time + ", " + pontos + " pontos, " + ataque + " gols marcados, " + defesa + " gols sofridos";

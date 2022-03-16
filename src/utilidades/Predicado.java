@@ -8,7 +8,7 @@ public class Predicado implements Predicate<Times>{
 
 	@Override
 	public boolean test(Times t) {
-		return t.getPontos() >= 60;
+		return t.getAtaque() <= 50;
 	}
 
 }
