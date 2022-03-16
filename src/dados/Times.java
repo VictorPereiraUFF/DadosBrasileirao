@@ -48,7 +48,7 @@ public class Times {
 	
 	@Override
 	public String toString() {
-		return time + ", " + pontos + " pontos, " + ataque + " gols marcados" + defesa + " gols sofridos";
+		return time + ", " + pontos + " pontos, " + ataque + " gols marcados, " + defesa + " gols sofridos";
 	}
 	
 	
