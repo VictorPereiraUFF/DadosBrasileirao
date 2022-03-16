@@ -15,7 +15,7 @@ public class Programa {
 		lista.add(new Times("Botafogo", 59, 43, 39));
 		lista.add(new Times("Fluminense", 50, 45, 45));	
 		
-		lista.removeIf(Times::staticTimes);
+		lista.removeIf(Times::nonStaticTimes);
 		
 		for (Times t : lista) {
 			System.out.println(lista);

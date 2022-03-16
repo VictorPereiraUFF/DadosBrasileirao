@@ -50,6 +50,9 @@ public class Times {
 		return t.getAtaque() <= 50;
 	}
 	
+	public boolean nonStaticTimes() {
+		return defesa <= 35 ;
+	}
 	
 	
 	@Override
