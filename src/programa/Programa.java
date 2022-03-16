@@ -2,6 +2,7 @@ package programa;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import dados.Times;
 
@@ -15,7 +16,9 @@ public class Programa {
 		lista.add(new Times("Botafogo", 59, 43, 39));
 		lista.add(new Times("Fluminense", 50, 45, 45));	
 		
-		lista.removeIf(Times::nonStaticTimes);
+		Predicate<Times> pred = p -> p.getDefesa() <= 40;
+		
+		lista.removeIf(pred);
 		
 		for (Times t : lista) {
 			System.out.println(lista);
