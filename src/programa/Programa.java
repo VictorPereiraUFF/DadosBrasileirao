@@ -2,6 +2,7 @@ package programa;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import dados.Times;
 
@@ -21,8 +22,16 @@ public class Programa {
 		lista.add(new Times("Ponte Preta", 55, 48, 52));
 		lista.add(new Times("Grêmio", 53, 41, 44));
 		lista.add(new Times("São Paulo", 52, 44, 36));	
+		
+		int bonus = 10;
+		
+		Consumer<Times> cons = t -> {
+			if (t.getDefesa() <= 40) {
+				t.setPontos(t.getPontos() + bonus);
+			}
+		};
 
-		lista.forEach(Times::nonStaticBonusPontuacao);
+		lista.forEach(cons);
 		
 		lista.forEach(System.out::println);
 

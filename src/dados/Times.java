@@ -56,7 +56,7 @@ public class Times {
 	}
 	
 	public  void nonStaticBonusPontuacao () {
-		if (getAtaque() >= 60) {
+		if (getDefesa() <= 50) {
 			setPontos((getPontos()*3) - 100);
 		}
 		else {
