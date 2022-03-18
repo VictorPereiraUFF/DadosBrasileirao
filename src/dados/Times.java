@@ -6,7 +6,7 @@ public class Times {
 	private Integer pontos;
 	private Integer ataque;
 	private Integer defesa;
-	
+
 	public Times(String time, Integer pontos, Integer ataque, Integer defesa) {
 		this.time = time;
 		this.pontos = pontos;
@@ -54,10 +54,11 @@ public class Times {
 			t.setPontos(t.getPontos() + 5);
 		}
 	}
+
 	
 	@Override
 	public String toString() {
-		return time + ", " + pontos + " pontos, " + ataque + " gols marcados, " + defesa + " gols sofridos";
+		return (time + ", " + pontos + " pontos, " + ataque + " gols marcados, " + defesa + " gols sofridos");
 	}
 	
 	

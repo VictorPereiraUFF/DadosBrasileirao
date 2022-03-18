@@ -25,5 +25,7 @@ public class Programa {
 		lista.forEach(Times::staticBonusPontuacao);
 		
 		lista.forEach(System.out::println);
+
 	}
+
 }
