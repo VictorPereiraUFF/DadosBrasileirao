@@ -46,14 +46,14 @@ public class Times {
 		this.defesa = defesa;
 	}
 	
-	public static boolean staticTimes(Times t) {
-		return t.getAtaque() <= 50;
+	public static void staticBonusPontuacao (Times t) {
+		if (t.getAtaque() >= 60) {
+			t.setPontos(t.getPontos() + 10);
+		}
+		else {
+			t.setPontos(t.getPontos() + 5);
+		}
 	}
-	
-	public boolean nonStaticTimes() {
-		return defesa <= 35 ;
-	}
-	
 	
 	@Override
 	public String toString() {
