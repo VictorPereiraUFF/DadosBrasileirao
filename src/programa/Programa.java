@@ -22,7 +22,7 @@ public class Programa {
 		lista.add(new Times("Grêmio", 53, 41, 44));
 		lista.add(new Times("São Paulo", 52, 44, 36));	
 
-		lista.forEach(Times::staticBonusPontuacao);
+		lista.forEach(Times::nonStaticBonusPontuacao);
 		
 		lista.forEach(System.out::println);
 

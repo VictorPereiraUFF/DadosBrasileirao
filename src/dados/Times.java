@@ -54,6 +54,15 @@ public class Times {
 			t.setPontos(t.getPontos() + 5);
 		}
 	}
+	
+	public  void nonStaticBonusPontuacao () {
+		if (getAtaque() >= 60) {
+			setPontos((getPontos()*3) - 100);
+		}
+		else {
+			setPontos((getPontos()*2) - 50);
+		}
+	}
 
 	
 	@Override
