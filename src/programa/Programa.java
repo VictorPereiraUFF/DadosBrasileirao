@@ -31,8 +31,8 @@ public class Programa {
 			}
 		};
 
-		lista.forEach(cons);
-		
+		lista.forEach(t -> t.setAtaque(t.getAtaque() + 15));
+			
 		lista.forEach(System.out::println);
 
 	}
