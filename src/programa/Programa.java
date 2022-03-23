@@ -24,7 +24,7 @@ public class Programa {
 		lista.add(new Times("Grêmio", 53, 41, 44));
 		lista.add(new Times("São Paulo", 52, 44, 36));	
 		
-		List<String>times = lista.stream().map(Times::FuncaoEstatica).collect(Collectors.toList()); 
+		List<String>times = lista.stream().map(Times::funcaoNaoEstatica).collect(Collectors.toList()); 
 		
 		times.forEach(System.out::println);
 

@@ -46,8 +46,12 @@ public class Times {
 		this.defesa = defesa;
 	}
 	
-	public static String FuncaoEstatica(Times t) {
+	public static String funcaoEstatica(Times t) {
 		return t.getTime().toUpperCase().replace("-", "/");
+	}
+	
+	public String funcaoNaoEstatica() {
+		return time.toLowerCase().replace("a", "!");
 	}
 	
 	@Override
