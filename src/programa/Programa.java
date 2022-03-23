@@ -2,10 +2,10 @@ package programa;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import dados.Times;
-import utilidades.Nomear;
 
 public class Programa {
 
@@ -24,7 +24,9 @@ public class Programa {
 		lista.add(new Times("Grêmio", 53, 41, 44));
 		lista.add(new Times("São Paulo", 52, 44, 36));	
 		
-		List<String>times = lista.stream().map(Times::funcaoNaoEstatica).collect(Collectors.toList()); 
+		Function<Times, String> F = t -> t.getTime().toLowerCase();
+		
+		List<String>times = lista.stream().map(F).collect(Collectors.toList()); 
 		
 		times.forEach(System.out::println);
 
