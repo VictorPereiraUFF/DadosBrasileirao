@@ -46,24 +46,9 @@ public class Times {
 		this.defesa = defesa;
 	}
 	
-	public static void staticBonusPontuacao (Times t) {
-		if (t.getAtaque() >= 60) {
-			t.setPontos(t.getPontos() + 10);
-		}
-		else {
-			t.setPontos(t.getPontos() + 5);
-		}
+	public static String FuncaoEstatica(Times t) {
+		return t.getTime().toUpperCase().replace("-", "/");
 	}
-	
-	public  void nonStaticBonusPontuacao () {
-		if (getDefesa() <= 50) {
-			setPontos((getPontos()*3) - 100);
-		}
-		else {
-			setPontos((getPontos()*2) - 50);
-		}
-	}
-
 	
 	@Override
 	public String toString() {
