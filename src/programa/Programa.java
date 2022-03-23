@@ -24,9 +24,8 @@ public class Programa {
 		lista.add(new Times("Grêmio", 53, 41, 44));
 		lista.add(new Times("São Paulo", 52, 44, 36));	
 		
-		Function<Times, String> F = t -> t.getTime().toLowerCase();
 		
-		List<String>times = lista.stream().map(F).collect(Collectors.toList()); 
+		List<String>times = lista.stream().map(t -> t.getTime().toLowerCase()).collect(Collectors.toList()); 
 		
 		times.forEach(System.out::println);
 
