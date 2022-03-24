@@ -2,10 +2,9 @@ package programa;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import dados.Times;
+import utilidades.SomarPontuacao;
 
 public class Programa {
 
@@ -25,9 +24,11 @@ public class Programa {
 		lista.add(new Times("São Paulo", 52, 44, 36));	
 		
 		
-		List<String>times = lista.stream().map(t -> t.getTime().toLowerCase()).collect(Collectors.toList()); 
+		SomarPontuacao sp = new SomarPontuacao();
 		
-		times.forEach(System.out::println);
+		int soma = sp.somaFiltrada(lista, t -> t.getTime().charAt(0) != 'A');
+		
+		System.out.println("Soma: " +  soma);
 
 	}
 
